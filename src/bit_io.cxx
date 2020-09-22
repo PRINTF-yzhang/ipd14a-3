@@ -161,5 +161,10 @@ std::vector<uint8_t> const& bostringstream::data() const
     return data_;
 }
 
+bofstream& operator<<(bofstream& bof, bool b) {
+    bof.write(b);
+    return bof;
+};
+
 } // end namespace ipd
 
