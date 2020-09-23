@@ -367,7 +367,7 @@ private:
 //
 //     bof << true << false << false;
 //
-bofstream& operator<<(bofstream& bof, bool b);
+bostream& operator<<(bostream& bof, bool b);
 
 /*
  * TEMPLATE IMPLEMENTATIONS
