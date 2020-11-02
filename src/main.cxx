@@ -7,6 +7,21 @@ void send_data(const char* argv[])
 {
     bofstream out("example-out.txt");
     assert_good(out, argv);
+    //The encoding of `Y` is 01011001
+    out << false << true;
+    out << false << true << true;
+    out << false << false << true;
+
+    //The encoding of `Z` is 01011010
+    out << false << true;
+    out << false << true << true;
+    out << false << true << false;
+
+
+    //The encoding of ` ` is 00100000
+    out << false << false;
+    out << true << false << false;
+    out << false << false << false;
 
     // 73 is the ASCII encoding of `I`
     // 73 in binary is 01001001
